@@ -244,6 +244,9 @@ img { max-width: 100%; display: block; }
   color: var(--color-vermillion);
   font-weight: 600;
 }
+.event-name {
+  flex: 1;
+}
 .event-note {
   text-align: center;
   margin-top: 1.5rem;
