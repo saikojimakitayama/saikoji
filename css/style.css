@@ -87,9 +87,14 @@ img { max-width: 100%; display: block; }
     background-color: var(--color-indigo);
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    visibility: hidden;
+    transition: max-height 0.3s ease, visibility 0s linear 0.3s;
   }
-  .site-nav.is-open { max-height: 500px; }
+  .site-nav.is-open {
+    max-height: 500px;
+    visibility: visible;
+    transition: max-height 0.3s ease, visibility 0s linear 0s;
+  }
   .site-nav ul {
     flex-direction: column;
     gap: 0;
@@ -106,7 +111,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("../images/shourou-hero.png") center center / cover no-repeat;
+  background: url("../images/shourou-hero.jpg") center center / cover no-repeat;
   text-align: center;
   color: #fdfaf3;
   scroll-margin-top: var(--header-height);
@@ -140,10 +145,12 @@ img { max-width: 100%; display: block; }
 
 /* Section base (reused by all content sections) */
 .section {
-  max-width: 900px;
-  margin: 0 auto;
   padding: 5rem 1.5rem;
   scroll-margin-top: var(--header-height);
+}
+.section-inner {
+  max-width: 900px;
+  margin: 0 auto;
 }
 .section-alt {
   background-color: #efe8d8;
