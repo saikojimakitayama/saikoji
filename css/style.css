@@ -227,3 +227,24 @@ img { max-width: 100%; display: block; }
   color: var(--color-indigo);
   margin-bottom: 0.8rem;
 }
+
+.event-list {
+  max-width: 500px;
+  margin: 0 auto;
+  border-top: 1px solid #c9bfa5;
+}
+.event-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.9rem 0.5rem;
+  border-bottom: 1px solid #c9bfa5;
+}
+.event-month {
+  flex: 0 0 60px;
+  color: var(--color-vermillion);
+  font-weight: 600;
+}
+.event-note {
+  text-align: center;
+  margin-top: 1.5rem;
+}
