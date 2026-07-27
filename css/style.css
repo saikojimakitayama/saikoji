@@ -1,0 +1,204 @@
+:root {
+  --color-bg: #f7f3ea;
+  --color-ink: #24303d;
+  --color-indigo: #1f3a5f;
+  --color-indigo-dark: #16283f;
+  --color-gold: #b8860b;
+  --color-vermillion: #9b2f26;
+  --font-serif: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --header-height: 64px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-serif);
+  color: var(--color-ink);
+  background-color: var(--color-bg);
+  line-height: 1.8;
+}
+
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+
+/* Header */
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background-color: var(--color-indigo);
+  color: #f7f3ea;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1.5rem;
+  height: var(--header-height);
+}
+.site-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+.site-title-kana {
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+  opacity: 0.8;
+}
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px; height: 20px;
+  background: none; border: none; cursor: pointer;
+}
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  background-color: #f7f3ea;
+}
+.site-nav ul {
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-link {
+  font-size: 0.9rem;
+  padding: 0.3rem 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+.nav-link:hover, .nav-link:focus {
+  border-bottom-color: var(--color-gold);
+}
+
+@media (max-width: 768px) {
+  .nav-toggle { display: flex; }
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    background-color: var(--color-indigo);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .site-nav.is-open { max-height: 500px; }
+  .site-nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 1.5rem 1rem;
+  }
+  .site-nav li { border-top: 1px solid rgba(255,255,255,0.15); }
+  .nav-link { display: block; padding: 0.8rem 0; }
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../images/shourou-hero.png") center center / cover no-repeat;
+  text-align: center;
+  color: #fdfaf3;
+  scroll-margin-top: var(--header-height);
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(22,40,63,0.55), rgba(22,40,63,0.75));
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 1.5rem;
+}
+.hero-kana {
+  letter-spacing: 0.3em;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+.hero-sub {
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+}
+
+/* Section base (reused by all content sections) */
+.section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+  scroll-margin-top: var(--header-height);
+}
+.section-alt {
+  background-color: #efe8d8;
+}
+.section-title {
+  font-size: 1.8rem;
+  color: var(--color-indigo);
+  text-align: center;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1em;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  background-color: var(--color-gold);
+  margin: 0.8rem auto 2rem;
+}
+.about-text {
+  max-width: 700px;
+  margin: 0 auto 1.2rem;
+  text-align: center;
+}
+.about-note {
+  font-size: 0.9rem;
+  color: #5a5347;
+}
+.info-list {
+  max-width: 500px;
+  margin: 2rem auto 0;
+  border-top: 1px solid #c9bfa5;
+}
+.info-row {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #c9bfa5;
+}
+.info-row dt {
+  flex: 0 0 100px;
+  color: var(--color-indigo);
+  font-weight: 600;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--color-indigo-dark);
+  color: #f7f3ea;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 600px) {
+  .info-row { flex-direction: column; gap: 0.3rem; }
+  .info-row dt { flex: none; }
+}
