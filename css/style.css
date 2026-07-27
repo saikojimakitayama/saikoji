@@ -263,3 +263,20 @@ img { max-width: 100%; display: block; }
 .map-embed iframe {
   display: block;
 }
+
+.contact-list {
+  margin-bottom: 1.5rem;
+}
+.contact-note {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .priest-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .event-item {
+    padding: 0.9rem 0;
+  }
+}
