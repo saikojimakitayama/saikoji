@@ -202,3 +202,28 @@ img { max-width: 100%; display: block; }
   .info-row { flex-direction: column; gap: 0.3rem; }
   .info-row dt { flex: none; }
 }
+
+.priest-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.priest-photo-placeholder {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #d8cdb0, #b8ab86);
+  border: 3px solid var(--color-gold);
+  flex-shrink: 0;
+}
+.priest-info {
+  max-width: 480px;
+}
+.priest-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-indigo);
+  margin-bottom: 0.8rem;
+}
