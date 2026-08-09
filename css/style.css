@@ -188,6 +188,30 @@ img { max-width: 100%; display: block; }
   font-size: 1rem;
   color: #5a5347;
 }
+/* セクション内の小見出し（例：寺の紹介の中の「由緒・沿革」） */
+.subsection-title {
+  font-size: 1.3rem;
+  color: var(--color-indigo);
+  text-align: center;
+  margin: 3rem 0 0.5rem;
+  letter-spacing: 0.1em;
+}
+.subsection-title::after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 2px;
+  background-color: var(--color-gold);
+  margin: 0.6rem auto 1.8rem;
+}
+/* 由緒・沿革は長めの文章なので、中央揃えではなく左揃えにして読みやすくします */
+.history-block {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.history-text {
+  text-align: left;
+}
 .info-list {
   max-width: 500px;
   margin: 2rem auto 0;
