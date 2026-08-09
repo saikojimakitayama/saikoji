@@ -355,6 +355,7 @@ img { max-width: 100%; display: block; }
 }
 .price-table {
   width: 100%;
+  min-width: 420px;
   border-collapse: collapse;
   background-color: #fffdf8;
 }
@@ -363,6 +364,10 @@ img { max-width: 100%; display: block; }
   border: 1px solid #c9bfa5;
   padding: 0.8rem 1rem;
   text-align: center;
+}
+.price-table td,
+.price-table thead th {
+  white-space: nowrap;
 }
 .price-table thead th {
   background-color: var(--color-indigo);
@@ -503,4 +508,16 @@ img { max-width: 100%; display: block; }
 }
 .memorial-other {
   margin-top: 2.5rem;
+}
+
+@media (max-width: 860px) {
+  .assurance-item {
+    flex-basis: 100%;
+    max-width: 400px;
+  }
+}
+
+.grave-photo {
+  max-width: 560px;
+  margin: 2rem auto 0;
 }

@@ -33,7 +33,7 @@
         <li><a href="index.html#about" class="nav-link">寺の紹介</a></li>
         <li><a href="index.html#priest" class="nav-link">住職紹介</a></li>
         <li><a href="index.html#events" class="nav-link">年間行事</a></li>
-        <li><a href="eitaikuyo.html" class="nav-link">永代供養墓</a></li>
+        <li><a href="eitaikuyo.html" class="nav-link" aria-current="page">永代供養墓</a></li>
         <li><a href="index.html#access" class="nav-link">アクセス</a></li>
         <li><a href="#contact" class="nav-link">お問い合わせ</a></li>
       </ul>
@@ -54,7 +54,7 @@
       <ul class="assurance-list">
         <li class="assurance-item">
           <p class="assurance-head">年間管理費<br>なし</p>
-          <p class="assurance-body">毎年の費用は一切かかりません。お申込み時のご負担のみです。</p>
+          <p class="assurance-body">毎年の費用は一切かかりません。</p>
         </li>
         <li class="assurance-item">
           <p class="assurance-head">檀家に<br>ならなくてよい</p>
@@ -83,33 +83,35 @@
 
   <section id="price" class="section">
     <div class="section-inner">
+      <!-- ※基本料金に含まれるもの（刻字料・ご納骨時の費用など）について、住職にご確認のうえ必要に応じて追記してください -->
       <h2 class="section-title">費用</h2>
-      <div class="price-table-wrap">
+      <div class="price-table-wrap" tabindex="0" role="region" aria-label="費用の表">
         <table class="price-table">
           <thead>
-            <tr><th>&nbsp;</th><th>檀家以外の方</th><th>檀家の方</th></tr>
+            <tr><td></td><th scope="col">檀家以外の方</th><th scope="col">檀家の方</th></tr>
           </thead>
           <tbody>
-            <tr><th>基本料金<span class="price-note-inline">（ご遺骨1体を含む）</span></th><td>15万円</td><td>10万円</td></tr>
-            <tr><th>ご遺骨1体追加ごと</th><td>+3万円</td><td>+2万円</td></tr>
-            <tr><th>年間管理費</th><td>なし</td><td>なし</td></tr>
+            <tr><th scope="row">基本料金<span class="price-note-inline">（ご遺骨1体を含む）</span></th><td>15万円</td><td>10万円</td></tr>
+            <tr><th scope="row">ご遺骨1体追加ごと</th><td>+3万円</td><td>+2万円</td></tr>
+            <tr><th scope="row">年間管理費</th><td>なし</td><td>なし</td></tr>
           </tbody>
         </table>
       </div>
       <p class="about-text">ご遺骨の数に応じた費用の目安は次のとおりです。</p>
-      <div class="price-table-wrap">
+      <div class="price-table-wrap" tabindex="0" role="region" aria-label="ご遺骨の数ごとの費用の表">
         <table class="price-table">
           <thead>
-            <tr><th>ご遺骨の数</th><th>檀家以外の方</th><th>檀家の方</th></tr>
+            <tr><th scope="col">ご遺骨の数</th><th scope="col">檀家以外の方</th><th scope="col">檀家の方</th></tr>
           </thead>
           <tbody>
-            <tr><th>1体</th><td>15万円</td><td>10万円</td></tr>
-            <tr><th>2体</th><td>18万円</td><td>12万円</td></tr>
-            <tr><th>3体</th><td>21万円</td><td>14万円</td></tr>
+            <tr><th scope="row">1体</th><td>15万円</td><td>10万円</td></tr>
+            <tr><th scope="row">2体</th><td>18万円</td><td>12万円</td></tr>
+            <tr><th scope="row">3体</th><td>21万円</td><td>14万円</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="about-note">※4体以上の場合も同じ計算でお受けいたします。詳しくはお問い合わせください。</p>
+      <p class="about-text about-note">※4体以上の場合も同じ計算でお受けいたします。詳しくはお問い合わせください。</p>
+      <p class="about-text about-note">※合祀のため、ご納骨後にご遺骨を取り出すことはできません。</p>
     </div>
   </section>
 
@@ -120,17 +122,17 @@
         西光寺の永代供養墓は、他の方のご遺骨とともに合祀（ごうし）する形式です。境内の墓地に設けておりますので、いつでも自由にお参りいただけます。
       </p>
       <p class="about-text">
-        合祀のため区画の空き状況に左右されず、お申し出をお断りすることがありません。
+        合祀のため区画の空き状況に左右されず、順番をお待ちいただくことはありません。
       </p>
-      <div class="grave-photo-placeholder" aria-hidden="true">
-        <p>写真を準備中です</p>
-      </div>
-      <!-- ※永代供養墓の写真が用意できたら、上の <div class="grave-photo-placeholder"> ごと
-           <img src="images/eitaikuyo.jpg" alt="西光寺の永代供養墓"> に置き換えてください -->
       <div class="notice-box">
         <p class="notice-title">お申込み前にご確認ください</p>
         <p>合祀した後は、ご遺骨を取り出すことができません。将来ほかのお墓へ移す可能性がある場合は、お申込み前にご相談ください。</p>
       </div>
+      <div class="grave-photo-placeholder" aria-hidden="true">
+        <p>写真を準備中です</p>
+      </div>
+      <!-- ※永代供養墓の写真が用意できたら、上の <div class="grave-photo-placeholder"> ごと
+           <img src="images/eitaikuyo.jpg" alt="西光寺の永代供養墓" class="grave-photo"> に置き換えてください -->
     </div>
   </section>
 
@@ -193,7 +195,7 @@
         </div>
         <div class="faq-item">
           <dt class="faq-q">年間管理費はかかりますか？</dt>
-          <dd class="faq-a">かかりません。お申込み時の費用のみで、その後のご負担はございません。</dd>
+          <dd class="faq-a">かかりません。毎年の管理費のご負担はございません。</dd>
         </div>
         <div class="faq-item">
           <dt class="faq-q">生前に申し込めますか？</dt>
