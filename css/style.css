@@ -6,12 +6,17 @@
   --color-gold: #b8860b;
   --color-vermillion: #9b2f26;
   --font-serif: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
-  --header-height: 64px;
+  --header-height: 72px;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+/* 高齢の方にも読みやすいよう、基準の文字サイズを 16px → 18px にしています。
+   ここを変えるとサイト全体の文字が一括で拡大・縮小します。 */
+html {
+  scroll-behavior: smooth;
+  font-size: 112.5%;
+}
 
 body {
   font-family: var(--font-serif);
@@ -46,9 +51,10 @@ img { max-width: 100%; display: block; }
   font-size: 1.4rem;
   font-weight: 600;
   letter-spacing: 0.05em;
+  line-height: 1.3;
 }
 .site-title-kana {
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   margin-left: 0.5rem;
   opacity: 0.8;
 }
@@ -66,10 +72,10 @@ img { max-width: 100%; display: block; }
 }
 .site-nav ul {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.2rem;
 }
 .nav-link {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   padding: 0.3rem 0;
   border-bottom: 2px solid transparent;
   transition: border-color 0.2s;
@@ -78,7 +84,9 @@ img { max-width: 100%; display: block; }
   border-bottom-color: var(--color-gold);
 }
 
-@media (max-width: 768px) {
+/* 文字を大きくしたぶん横並びのナビが収まらなくなるため、
+   980px 以下ではハンバーガーメニューに切り替えます。 */
+@media (max-width: 980px) {
   .nav-toggle { display: flex; }
   .site-nav {
     position: absolute;
@@ -129,7 +137,7 @@ img { max-width: 100%; display: block; }
 }
 .hero-kana {
   letter-spacing: 0.3em;
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
   opacity: 0.9;
 }
@@ -177,7 +185,7 @@ img { max-width: 100%; display: block; }
   text-align: center;
 }
 .about-note {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #5a5347;
 }
 .info-list {
@@ -203,7 +211,7 @@ img { max-width: 100%; display: block; }
   color: #f7f3ea;
   text-align: center;
   padding: 1.5rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 600px) {
@@ -302,7 +310,7 @@ img { max-width: 100%; display: block; }
   margin-bottom: 0.8rem;
 }
 .page-lead {
-  font-size: 1rem;
+  font-size: 1.15rem;
   opacity: 0.9;
 }
 
@@ -328,7 +336,7 @@ img { max-width: 100%; display: block; }
   margin-bottom: 0.8rem;
 }
 .assurance-body {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .need-list {
@@ -382,7 +390,7 @@ img { max-width: 100%; display: block; }
 }
 .price-note-inline {
   display: block;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 
@@ -396,7 +404,7 @@ img { max-width: 100%; display: block; }
   background: repeating-linear-gradient(45deg, #e6dcc4, #e6dcc4 12px, #ded3c8 12px, #ded3c8 24px);
   border: 1px solid #c9bfa5;
   color: #5a5347;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .notice-box {
@@ -437,7 +445,7 @@ img { max-width: 100%; display: block; }
   background-color: var(--color-gold);
 }
 .flow-step {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   letter-spacing: 0.15em;
   color: var(--color-vermillion);
 }
@@ -448,7 +456,7 @@ img { max-width: 100%; display: block; }
   margin-bottom: 0.3rem;
 }
 .flow-body {
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .faq-list {
@@ -476,7 +484,7 @@ img { max-width: 100%; display: block; }
 .faq-a {
   position: relative;
   padding-left: 1.8rem;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 .faq-a::before {
   content: "A";
