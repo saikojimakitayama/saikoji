@@ -480,3 +480,27 @@ img { max-width: 100%; display: block; }
   color: var(--color-vermillion);
   font-size: 1.1rem;
 }
+
+.memorial-price {
+  margin-top: 2rem;
+  font-size: 1.05rem;
+}
+.cta-wrap {
+  text-align: center;
+}
+.cta-link {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  background-color: var(--color-vermillion);
+  color: #fdfaf3;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  transition: background-color 0.2s;
+}
+.cta-link:hover,
+.cta-link:focus {
+  background-color: #7d251e;
+}
+.memorial-other {
+  margin-top: 2.5rem;
+}
