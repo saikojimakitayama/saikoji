@@ -121,12 +121,11 @@ GitHub の画面を再読み込みすると、ファイルの一覧に `index.ht
 Save を押してから1〜5分ほどで公開されます。
 同じ **Pages** の画面を再読み込みすると、上のほうに URL が表示されます。
 
-```
-https://（ユーザー名）.github.io/saikoji/
-```
+**西光寺のホームページの URL は次のとおりです。**
 
-たとえばユーザー名が `saikoji-suzuka` なら
-`https://saikoji-suzuka.github.io/saikoji/` になります。
+```
+https://saikojimakitayama.github.io/saikoji/
+```
 
 この URL をお父さまに LINE やメールで送れば、スマホでもパソコンでも見られます。
 
@@ -134,11 +133,11 @@ https://（ユーザー名）.github.io/saikoji/
 
 ## 公開したあとにやること
 
-### 1. og:url の書き換え（任意）
+### 1. og:url の書き換え（対応済み）
 
-URL が決まったら、`index.html` と `eitaikuyo.html` の先頭にある
-`https://example.com` という部分を、実際の URL に書き換えてください。
-LINE などで URL を送ったときに、寺の写真と説明が表示されるようになります。
+`index.html` と `eitaikuyo.html` の `og:url` と `og:image` は、
+上の URL に書き換え済みです。
+LINE などで URL を送ると、寺の写真とページの説明が表示されます。
 
 ### 2. 内容を確認してもらう
 
