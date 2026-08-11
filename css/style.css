@@ -133,7 +133,9 @@ img { max-width: 100%; display: block; }
   position: relative;
   z-index: 1;
   padding: 0 1.5rem;
-  text-shadow: 0 2px 12px rgba(16,26,40,0.75), 0 1px 3px rgba(16,26,40,0.6);
+  /* 背景写真が明るい青空なので、画像全体を暗くするかわりに
+     文字の影を強めて白文字を読みやすくしています */
+  text-shadow: 0 2px 14px rgba(16,26,40,0.85), 0 1px 4px rgba(16,26,40,0.8);
 }
 .hero-kana {
   letter-spacing: 0.3em;
@@ -150,6 +152,11 @@ img { max-width: 100%; display: block; }
 .hero-sub {
   font-size: 1.1rem;
   letter-spacing: 0.05em;
+}
+/* スマホは縦長のため、中央のままだと鐘楼だけが写り本堂が切れてしまいます。
+   表示位置を少し左に寄せて、本堂と鐘楼の両方が入るようにしています */
+@media (max-width: 700px) {
+  .hero { background-position: 34% center; }
 }
 
 /* Section base (reused by all content sections) */
