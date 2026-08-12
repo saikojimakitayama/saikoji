@@ -154,10 +154,27 @@ img { max-width: 100%; display: block; }
   font-size: 1.1rem;
   letter-spacing: 0.05em;
 }
-/* スマホは縦長のため、中央のままだと鐘楼だけが写り本堂が切れてしまいます。
-   表示位置を少し左に寄せて、本堂と鐘楼の両方が入るようにしています */
+/* スマホは画面が縦長のため、cover のままだと高さに合わせて拡大され、
+   写真の左右が大きく切り落とされてしまいます。
+   スマホでは写真全体を幅いっぱいに表示し、その下（藍色の地）に寺名を置きます。
+   文字を写真に重ねないので、白文字の読みやすさも上がります。 */
 @media (max-width: 700px) {
-  .hero { background-position: 34% center; }
+  .hero {
+    min-height: 0;
+    display: block;
+    padding: var(--header-height) 0 3rem;
+    background-color: var(--color-indigo);
+    background-position: center top;
+    background-size: contain;
+    background-origin: content-box;
+  }
+  .hero-overlay { display: none; }
+  .hero-content {
+    /* 写真（1238×864）の高さぶんだけ下げて、写真と重ならないようにします */
+    margin-top: 69.8vw;
+    padding: 2rem 1.5rem 0;
+    text-shadow: none;
+  }
 }
 
 /* Section base (reused by all content sections) */
