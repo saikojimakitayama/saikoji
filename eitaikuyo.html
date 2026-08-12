@@ -253,10 +253,17 @@
         </div>
       </dl>
       <p class="about-note contact-note">永代供養墓についてのご相談・ご見学を承っております。お電話のほか、下の入力欄からもお受けしております。</p>
-      <div class="form-embed">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdfXz29sq_CMB3nJsl2j_Km3CRPtvDnB8a_JDdgJTH4oqpvHg/viewform?embedded=true" title="西光寺 お問い合わせフォーム" loading="lazy">読み込んでいます…</iframe>
+      <div id="formArea">
+        <div class="form-embed">
+          <iframe onload="window.saikojiFormLoads=(window.saikojiFormLoads||0)+1;if(window.saikojiShowFormDone)window.saikojiShowFormDone();" id="contactForm" src="https://docs.google.com/forms/d/e/1FAIpQLSdfXz29sq_CMB3nJsl2j_Km3CRPtvDnB8a_JDdgJTH4oqpvHg/viewform?embedded=true" title="西光寺 お問い合わせフォーム" loading="lazy">読み込んでいます…</iframe>
+        </div>
+        <p class="about-note form-fallback">うまく表示されない場合は、<a href="https://docs.google.com/forms/d/e/1FAIpQLSdfXz29sq_CMB3nJsl2j_Km3CRPtvDnB8a_JDdgJTH4oqpvHg/viewform" target="_blank" rel="noopener">お問い合わせフォームのページ</a>からお送りください。</p>
       </div>
-      <p class="about-note form-fallback">うまく表示されない場合は、<a href="https://docs.google.com/forms/d/e/1FAIpQLSdfXz29sq_CMB3nJsl2j_Km3CRPtvDnB8a_JDdgJTH4oqpvHg/viewform" target="_blank" rel="noopener">お問い合わせフォームのページ</a>からお送りください。</p>
+      <div class="form-done" id="formDone" hidden>
+        <p class="form-done-title">お問い合わせを承りました</p>
+        <p>内容を確認のうえ、折り返しご連絡いたします。</p>
+        <p class="about-note">お急ぎの場合は <a href="tel:059-378-0953">059-378-0953</a> までお電話ください。</p>
+      </div>
     </div>
   </section>
 </main>
