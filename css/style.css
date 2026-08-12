@@ -597,6 +597,31 @@ img { max-width: 100%; display: block; }
   margin-top: 1.5rem;
 }
 
+/* お問い合わせフォーム（Googleフォームの埋め込み）
+   フォームの中身を差し替えたいときは、Googleフォーム側を編集してください。
+   このページ側の書き換えは不要です。 */
+.form-embed {
+  max-width: 700px;
+  margin: 2rem auto 0;
+}
+/* 高さは実測値です。足りないと送信ボタンが隠れてしまうため、
+   質問を増やしたときは実際に表示して確認してください。
+   （実測：幅700pxで約1400px、幅360pxで約1540px、幅290pxで約1570px） */
+.form-embed iframe {
+  display: block;
+  width: 100%;
+  height: 1440px;
+  border: 0;
+}
+@media (max-width: 600px) {
+  .form-embed iframe { height: 1600px; }
+}
+.form-fallback {
+  max-width: 700px;
+  margin: 1rem auto 0;
+  text-align: center;
+}
+
 @media (max-width: 860px) {
   .assurance-item {
     flex-basis: 100%;
