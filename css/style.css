@@ -211,6 +211,15 @@ img { max-width: 100%; display: block; }
   background-color: var(--color-gold);
   margin: 0.6rem auto 1.8rem;
 }
+/* セクション内に置く横長の写真（本堂など） */
+.section-photo {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  margin: 2rem auto;
+  border: 1px solid #c9bfa5;
+}
 /* 由緒・沿革は長めの文章なので、中央揃えではなく左揃えにして読みやすくします */
 .history-block {
   max-width: 700px;
@@ -257,13 +266,12 @@ img { max-width: 100%; display: block; }
   align-items: center;
   justify-content: center;
 }
-.priest-photo-placeholder {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #d8cdb0, #b8ab86);
-  border: 3px solid var(--color-gold);
+.priest-photo {
+  width: 220px;
+  height: auto;
   flex-shrink: 0;
+  border: 3px solid var(--color-gold);
+  border-radius: 4px;
 }
 .priest-info {
   max-width: 480px;
@@ -425,17 +433,32 @@ img { max-width: 100%; display: block; }
   font-weight: 400;
 }
 
-.grave-photo-placeholder {
-  max-width: 560px;
-  margin: 2rem auto 0;
-  aspect-ratio: 4 / 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: repeating-linear-gradient(45deg, #e6dcc4, #e6dcc4 12px, #ded3c8 12px, #ded3c8 24px);
-  border: 1px solid #c9bfa5;
-  color: #5a5347;
+/* 「倶會一處」— 石碑に刻まれた一節をページ冒頭で見せる */
+.kue-word {
+  text-align: center;
+  font-size: clamp(2rem, 7vw, 3rem);
+  font-weight: 800;
+  color: var(--color-indigo);
+  letter-spacing: 0.25em;
+  text-indent: 0.25em;
+  line-height: 1.4;
+  margin-top: 2.5rem;
+}
+.kue-read {
+  text-align: center;
   font-size: 1rem;
+  color: #5a5347;
+  letter-spacing: 0.3em;
+  text-indent: 0.3em;
+  margin-bottom: 2rem;
+}
+.kue-read::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  background-color: var(--color-gold);
+  margin: 1.2rem auto 0;
 }
 
 .notice-box {
@@ -557,6 +580,10 @@ img { max-width: 100%; display: block; }
 }
 
 .grave-photo {
+  display: block;
+  width: 100%;
   max-width: 560px;
-  margin: 2rem auto 0;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid #c9bfa5;
 }
